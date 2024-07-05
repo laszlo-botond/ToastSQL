@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Databases>
+    <Database databaseName="SzazEzer">
+        <Tables>
+            <Table tableName="TesztTabla">
+                <Structure>
+                    <Attribute type="int">ID</Attribute>
+                    <Attribute type="varchar" length="64">Name</Attribute>
+                    <Attribute type="date">Modified</Attribute>
+                    <Attribute type="double">Average</Attribute>
+                </Structure>
+                <PrimaryKey pkName="PK_TesztTabla">
+                    <PKAttribute>ID</PKAttribute>
+                </PrimaryKey>
+            </Table>
+            <Table tableName="JointTabla">
+                <Structure>
+                    <Attribute type="int">ID</Attribute>
+                    <Attribute type="int">IndAttr</Attribute>
+                    <Attribute type="int">NoInd</Attribute>
+                </Structure>
+                <PrimaryKey pkName="PK_JointTabla">
+                    <PKAttribute>ID</PKAttribute>
+                </PrimaryKey>
+                <IndexFiles>
+                    <IndexFile name="SokIndex" isUnique="0">
+                        <IAttribute>IndAttr</IAttribute>
+                    </IndexFile>
+                </IndexFiles>
+            </Table>
+        </Tables>
+    </Database>
+</Databases>
